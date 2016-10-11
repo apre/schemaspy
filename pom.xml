@@ -32,7 +32,7 @@
   </parent>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <svn.url>https://schemaspy.svn.sourceforge.net/svnroot/schemaspy</svn.url>
+    
   </properties>
   <licenses>
     <license>
@@ -41,11 +41,7 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  <scm>
-    <url>http://schemaspy.svn.sourceforge.net/viewvc/schemaspy/</url>
-    <connection>scm:svn:${svn.url}</connection>
-    <developerConnection>scm:svn:${svn.url}</developerConnection>
-  </scm>
+
   <developers>
     <developer>
       <id>john.currier</id>
@@ -75,7 +71,7 @@
               <mainClass>net.sourceforge.schemaspy.Main</mainClass>
             </manifest>
             <manifestEntries>
-              <Implementation-Build>${buildNumber}</Implementation-Build>
+              
             </manifestEntries>
           </archive>
         </configuration>
@@ -88,23 +84,7 @@
           <windowtitle>API for ${project.name} ${project.version}</windowtitle>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>buildnumber-maven-plugin</artifactId>
-        <version>1.0-beta-3</version>
-        <executions>
-          <execution>
-            <phase>validate</phase>
-            <goals>
-              <goal>create</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <doCheck>false</doCheck>
-          <doUpdate>false</doUpdate>
-        </configuration>
-      </plugin>
+
     </plugins>
   </build>
   <dependencies>
